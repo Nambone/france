@@ -1,13 +1,13 @@
-title: "République française"
-description: "Official website of the French Republic (roleplay)"
-baseurl: "" # Leave blank for root
-url: "https://<your-username>.github.io/french-republic-site"
-language: en
+title: République française
+description: Empowered by the Constitution and the French people.
 
-# Theme
-theme: jekyll-theme-minimal
+# Theme and plugins
+theme: minimal
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
 
-# Navigation Links
+# Navigation links
 nav_links:
   - title: "Home"
     url: "/"
@@ -18,10 +18,13 @@ nav_links:
   - title: "Prime Minister"
     url: "/prime-minister/"
 
-# Plugins
-plugins:
-  - jekyll-seo-tag
-  - jekyll-feed
+# Footer details
+footer:
+  text: "© 2024 République française. All rights reserved."
 
+# Additional site settings
+baseurl: "" # Leave blank for root deployment
+url: "https://<your-username>.github.io/french-republic-site"
+language: en
 markdown: kramdown
 highlighter: rouge
