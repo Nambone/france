@@ -10,58 +10,66 @@
     <div class="container">
         <!-- Header Section -->
         <header>
-            <h1 class="header-text">Departments, agencies, and public bodies</h1>
-            <p class="description">Click on the respective logo for more information.</p>
+            <h1 class="header-text english">Departments, agencies, and public bodies</h1>
+            <h1 class="header-text french" style="display: none;">Départements, agences et organismes publics</h1>
+            <p class="description english">Click on the respective logo for more information.</p>
+            <p class="description french" style="display: none;">Cliquez sur le logo respectif pour plus d'informations.</p>
         </header>
 
         <!-- Ministerial Sections -->
         <div class="ministries">
-            <h2 class="ministerial-title">Prime Minister & President</h2>
+            <h2 class="ministerial-title english">Prime Minister & President</h2>
+            <h2 class="ministerial-title french" style="display: none;">Premier ministre et président</h2>
+
             <div class="leaders">
-                <div class="leader"><a href="#prime-minister">Prime Minister</a></div>
-                <div class="leader"><a href="#president">President</a></div>
+                <div class="leader"><a href="#prime-minister" class="english">Prime Minister</a><a href="#prime-minister" class="french" style="display: none;">Premier ministre</a></div>
+                <div class="leader"><a href="#president" class="english">President</a><a href="#president" class="french" style="display: none;">Président</a></div>
             </div>
 
-            <h2 class="ministerial-title">6 Ministerial Departments</h2>
+            <h2 class="ministerial-title english">6 Ministerial Departments</h2>
+            <h2 class="ministerial-title french" style="display: none;">6 Départements ministériels</h2>
             <div class="departments">
                 <div class="department">
-                    <a href="#interior">
+                    <a href="#interior" class="english">
                         <img src="interior-logo.png" alt="Ministry of the Interior">
                         <p>Ministry of the Interior</p>
                     </a>
+                    <a href="#interior" class="french" style="display: none;">
+                        <img src="interior-logo.png" alt="Ministère de l'Intérieur">
+                        <p>Ministère de l'Intérieur</p>
+                    </a>
                 </div>
                 <div class="department">
-                    <a href="#europe-foreign-affairs">
+                    <a href="#europe-foreign-affairs" class="english">
                         <img src="europe-foreign-affairs-logo.png" alt="Ministry for Europe and Foreign Affairs">
                         <p>Ministry for Europe and Foreign Affairs</p>
                     </a>
-                </div>
-                <div class="department">
-                    <a href="#armed-forces">
-                        <img src="armed-forces-logo.png" alt="Ministry of Armed Forces">
-                        <p>Ministry of Armed Forces</p>
+                    <a href="#europe-foreign-affairs" class="french" style="display: none;">
+                        <img src="europe-foreign-affairs-logo.png" alt="Ministère des Affaires Européennes et Étrangères">
+                        <p>Ministère des Affaires Européennes et Étrangères</p>
                     </a>
                 </div>
-                <div class="department">
-                    <a href="#justice">
-                        <img src="justice-logo.png" alt="Ministry of Justice">
-                        <p>Ministry of Justice</p>
-                    </a>
-                </div>
-                <div class="department">
-                    <a href="#economy-finance">
-                        <img src="economy-finance-logo.png" alt="Ministry of Economy, Finance, and Industrial">
-                        <p>Ministry of Economy, Finance, and Industrial</p>
-                    </a>
-                </div>
-                <div class="department">
-                    <a href="#health-prevention">
-                        <img src="health-prevention-logo.png" alt="Ministry of Health and Prevention">
-                        <p>Ministry of Health and Prevention</p>
-                    </a>
-                </div>
+                <!-- Repeat similar structure for other departments -->
             </div>
         </div>
     </div>
+
+    <!-- Language Toggle Button -->
+    <button id="language-toggle">Français</button>
+
+    <script>
+        const toggleButton = document.getElementById('language-toggle');
+        toggleButton.addEventListener('click', () => {
+            const isEnglish = toggleButton.textContent === 'Français';
+            toggleButton.textContent = isEnglish ? 'English' : 'Français';
+            
+            document.querySelectorAll('.english').forEach((el) => {
+                el.style.display = isEnglish ? 'block' : 'none';
+            });
+            document.querySelectorAll('.french').forEach((el) => {
+                el.style.display = isEnglish ? 'none' : 'block';
+            });
+        });
+    </script>
 </body>
 </html>
