@@ -1,0 +1,133 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Header */
+.site-header {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Language Toggle Button */
+.language-toggle {
+    text-align: right;
+    margin: 20px;
+}
+
+#toggle-language {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+#toggle-language:hover {
+    background-color: #0056b3;
+}
+
+/* Main Section */
+main {
+    padding: 20px;
+}
+
+/* Departments and Agencies Section */
+.departments-agencies h2,
+.leaders h2 {
+    color: #333;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.departments-agencies p {
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+/* Department Links */
+.department-links {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.department-left h3 {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.department-right ul {
+    list-style: none;
+    padding: 0;
+}
+
+.department-right li {
+    margin: 5px 0;
+}
+
+.department-right a {
+    text-decoration: none;
+    color: #007BFF;
+    font-size: 18px;
+}
+
+.department-right a:hover {
+    color: #0056b3;
+}
+
+/* Leaders Section */
+.leaders-links ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.leaders-links li {
+    margin: 0 10px;
+}
+
+.leaders-links a {
+    text-decoration: none;
+    color: #007BFF;
+    font-size: 18px;
+}
+
+.leaders-links a:hover {
+    color: #0056b3;
+}
+
+/* Footer (Optional) */
+footer {
+    text-align: center;
+    margin-top: 30px;
+    padding: 10px;
+    background-color: #333;
+    color: white;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .department-links {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .leaders-links ul {
+        flex-direction: column;
+        align-items: center;
+    }
+}
