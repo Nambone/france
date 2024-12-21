@@ -1,64 +1,27 @@
-# Site settings
-title: French Republic
-description: Official website for the French Republic.
-baseurl: "" # Leave blank if the site is at the root of the domain
-url: "https://yourusername.github.io" # Replace with your site's URL
-lang: "en" # Default language
+title: "République française"
+description: "Official website of the French Republic (roleplay)"
+baseurl: "" # Leave blank for root
+url: "https://<your-username>.github.io/french-republic-site"
+language: en
 
-# Navigation links
+# Theme
+theme: jekyll-theme-minimal
+
+# Navigation Links
 nav_links:
   - title: "Home"
     url: "/"
   - title: "Departments"
     url: "/departments/"
-  - title: "Prime Minister"
-    url: "/prime-minister/"
   - title: "President"
     url: "/president/"
+  - title: "Prime Minister"
+    url: "/prime-minister/"
 
-# Social links (optional)
-social_links:
-  - title: "Twitter"
-    url: "https://twitter.com"
-  - title: "Facebook"
-    url: "https://facebook.com"
-
-# Author information (optional)
-author:
-  name: "Government of France"
-  email: "contact@gov.fr"
-
-# Theme settings
-theme: minimal
+# Plugins
 plugins:
-  - jekyll-seo-tag # Helps with SEO
-  - jekyll-sitemap # Creates a sitemap
-  - jekyll-feed # Adds an RSS feed
-  - jekyll-paginate # Optional: Pagination support
+  - jekyll-seo-tag
+  - jekyll-feed
 
-# Pagination settings
-paginate: 5 # Number of posts per page
-paginate_path: "/page:num/"
-
-# Localization
-languages:
-  en: "English"
-  fr: "Français"
-
-# Footer settings
-footer:
-  content: "© 2024 French Republic. All rights reserved."
-  powered_by: "Powered by Jekyll"
-
-# Excluded files/folders
-exclude:
-  - node_modules
-  - vendor
-  - Gemfile
-  - Gemfile.lock
-  - README.md
-
-# Markdown settings
 markdown: kramdown
-kramdown:
-  input: GFM
+highlighter: rouge
