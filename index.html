@@ -1,62 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Government of the UK</title>
-    <link rel="stylesheet" href="assets/css/styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>French Republic</title>
+  <link rel="stylesheet" href="assets/css/styles.css">
 </head>
-
 <body>
+  <!-- Header -->
+  <header class="site-header">
+    <img src="assets/images/site_header.png" alt="French Republic Logo" class="header-logo">
+    <h1>French Republic</h1>
+    <div class="language-toggle">
+      <!-- Language toggle button -->
+      <button id="toggle-language">FR</button>
+    </div>
+  </header>
 
-    <!-- Header with Site Image -->
-    <header>
-        <img src="assets/site_header.png" alt="Site Header" class="site-header">
-    </header>
+  <!-- Navigation Bar with Buttons -->
+  <nav class="navbar">
+    <button onclick="location.href='index.html'">Home</button>
+    <button onclick="location.href='departments/interior.html'">Ministry of the Interior</button>
+    <button onclick="location.href='departments/foreign_affairs.html'">Ministry for Europe and Foreign Affairs</button>
+    <button onclick="location.href='departments/armed_forces.html'">Ministry of Armed Forces</button>
+    <button onclick="location.href='departments/justice.html'">Ministry of Justice</button>
+    <button onclick="location.href='departments/economy.html'">Ministry of Economy, Finance, and Industry</button>
+    <button onclick="location.href='departments/health.html'">Ministry of Health and Prevention</button>
+    <button onclick="location.href='leaders/prime_minister.html'">Prime Minister</button>
+    <button onclick="location.href='leaders/president.html'">President</button>
+  </nav>
 
-    <!-- Main Content -->
-    <main>
-        <!-- Language Toggle (Can be added later) -->
-        <div class="language-toggle">
-            <button id="toggle-language">EN / FR</button>
-        </div>
+  <!-- Main Content -->
+  <main>
+    <section class="main-content">
+      <h2>Welcome to the Official Site of the French Republic</h2>
+      <p>This is the homepage, where you can access information about the French government, departments, and leaders.</p>
+    </section>
+  </main>
 
-        <!-- Department and Agencies Info -->
-        <section class="departments-agencies">
-            <h2>Departments, Agencies, and Public Bodies</h2>
-            <p>Click on the respective logo for more information.</p>
-            <div class="department-links">
-                <div class="department-left">
-                    <h3>6 Ministerial Departments</h3>
-                </div>
-                <div class="department-right">
-                    <ul>
-                        <li><a href="departments/interior.html">Ministry of the Interior</a></li>
-                        <li><a href="departments/foreign-affairs.html">Ministry for Europe and Foreign Affairs</a></li>
-                        <li><a href="departments/armed-forces.html">Ministry of Armed Forces</a></li>
-                        <li><a href="departments/justice.html">Ministry of Justice</a></li>
-                        <li><a href="departments/economy-finance.html">Ministry of Economy, Finance, and Industry</a></li>
-                        <li><a href="departments/health-prevention.html">Ministry of Health and Prevention</a></li>
-                    </ul>
-                </div>
-            </div>
-        </section>
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2024 French Republic</p>
+  </footer>
 
-        <!-- Prime Minister and President Links -->
-        <section class="leaders">
-            <h2>Prime Minister and President</h2>
-            <div class="leaders-links">
-                <ul>
-                    <li><a href="prime-minister.html">Prime Minister</a></li>
-                    <li><a href="president.html">President</a></li>
-                </ul>
-            </div>
-        </section>
-    </main>
-
-    <script src="assets/js/script.js"></script>
+  <!-- JavaScript for language toggle -->
+  <script>
+    document.getElementById('toggle-language').addEventListener('click', function() {
+      const currentLang = document.documentElement.lang;
+      const newLang = (currentLang === 'en') ? 'fr' : 'en';
+      
+      // Toggle button text and page language
+      this.textContent = (newLang === 'en') ? 'FR' : 'EN';
+      document.documentElement.lang = newLang;
+      
+      // Refresh page to show content in new language
+      location.reload();
+    });
+  </script>
 </body>
-
 </html>
