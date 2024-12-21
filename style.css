@@ -1,0 +1,93 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+header {
+    text-align: left;
+    margin-top: 20px;
+}
+
+.header-text {
+    font-size: 2em;
+    font-weight: bold;
+}
+
+.description {
+    font-size: 1em;
+    color: #555;
+}
+
+.ministries {
+    margin-top: 40px;
+}
+
+.ministerial-title {
+    font-size: 1.5em;
+    margin-bottom: 15px;
+}
+
+.leaders {
+    display: flex;
+    justify-content: flex-start;
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.leader a {
+    text-decoration: none;
+    font-size: 1.2em;
+    color: #007BFF;
+}
+
+.departments {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.department {
+    width: 30%;
+    text-align: center;
+}
+
+.department a {
+    text-decoration: none;
+    color: #333;
+}
+
+.department img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+.department p {
+    font-size: 1em;
+    font-weight: bold;
+    color: #007BFF;
+}
+
+@media (max-width: 768px) {
+    .departments {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .department {
+        width: 80%;
+    }
+}
